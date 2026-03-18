@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+    /* Institutional Color Palette */
+    --bg-page: #f8f9fa; /* Off-white for page background */
+    --bg-surface: #ffffff; /* Crisp white for cards/panels */
+    --primary-navy: #0a192f; /* Deep institutional blue */
+    --wealth-gold: #d4af37; /* Premium gold accent */
+    --wealth-gold-hover: #c5a028;
+    --success-green: #059669; /* Darker, trusted green */
+    --danger-red: #dc2626;
+    --text-primary: #0f172a; /* Near black for readability */
+    --text-secondary: #475569; /* Grey for secondary text */
+    --border-subtle: #e2e8f0;
+    
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-elevated: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Headings & Brands */
+h1, h2, h3, h4, h5, h6, .navbar-brand, .brand-text {
+    font-family: var(--font-heading);
+    color: var(--primary-navy);
+    font-weight: 700;
+}
+
+/* Institutional Panels */
+.glass-panel, .glass-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px; /* Sharp, professional corners */
+    box-shadow: var(--shadow-soft);
+    transition: box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    box-shadow: var(--shadow-elevated);
+}
+
+/* Custom Navigation */
+.navbar-glass {
+    background: var(--primary-navy) !important;
+    border-bottom: 3px solid var(--wealth-gold);
+}
+
+.navbar-glass .navbar-brand, 
+.navbar-glass .navbar-brand span,
+.navbar-glass .text-muted-glass,
+.navbar-glass .text-white {
+    color: white !important;
+}
+
+/* Form Controls */
+.form-control-glass {
+    background: white !important;
+    border: 1px solid var(--border-subtle) !important;
+    color: var(--text-primary) !important;
+    border-radius: 2px;
+    padding: 12px 16px;
+    font-family: var(--font-body);
+    transition: all 0.2s ease;
+}
+
+.form-control-glass:focus {
+    border-color: var(--primary-navy) !important;
+    box-shadow: 0 0 0 1px var(--primary-navy) !important;
+    outline: none;
+}
+
+.form-control-glass::placeholder {
+    color: #94a3b8;
+}
+
+.form-label {
+    color: var(--primary-navy);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.btn-neon {
+    background: var(--primary-navy);
+    border: none;
+    color: white;
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 2px;
+    padding: 12px 24px;
+    transition: all 0.2s ease;
+}
+
+.btn-neon:hover {
+    background: #0f2950;
+    color: white;
+    box-shadow: var(--shadow-elevated);
+}
+
+.btn-glass {
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    color: var(--primary-navy);
+    border-radius: 2px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-glass:hover {
+    background: var(--bg-page);
+    color: var(--primary-navy);
+    border-color: var(--primary-navy);
+}
+
+/* Gold Accent Button */
+.btn-gold {
+    background: var(--wealth-gold);
+    color: var(--primary-navy);
+    border: none;
+    font-weight: 700;
+    border-radius: 2px;
+    padding: 12px 24px;
+    transition: all 0.2s ease;
+}
+
+.btn-gold:hover {
+    background: var(--wealth-gold-hover);
+    color: var(--primary-navy);
+}
+
+/* Badges & Accents */
+.badge-neon-success {
+    background: #ecfdf5;
+    color: var(--success-green);
+    border: 1px solid #d1fae5;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+
+.badge-neon-warning {
+    background: #fffbeb;
+    color: #d97706;
+    border: 1px solid #fef3c7;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+
+/* Custom Table */
+.table-glass {
+    color: var(--text-primary);
+    vertical-align: middle;
+}
+
+.table-glass thead th {
+    background: var(--bg-page);
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--border-subtle);
+    padding: 1rem;
+}
+
+.table-glass tbody td {
+    background: white;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1rem;
+}
+
+.table-glass tbody tr:hover td {
+    background: var(--bg-page);
+}
+
+/* Utilities */
+.text-muted-glass {
+    color: var(--text-secondary) !important;
+}
+
+.border-glass-bottom {
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.text-gradient {
+    color: var(--primary-navy) !important; /* Override gradient for institutional look */
+}
+
+/* Helper for styling old 'neon' text specific instances */
+.text-neon-purple, .text-info {
+    color: var(--primary-navy) !important;
+}
+
+/* Balance Value styling */
+.admin-stat, .balance-value {
+    color: var(--primary-navy) !important;
+    text-shadow: none !important;
+    -webkit-text-fill-color: var(--primary-navy) !important;
+    background: none !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

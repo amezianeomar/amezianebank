@@ -1,0 +1,14 @@
+{
+  "reference_id": "TXN-987654321",
+  "type": "stock_purchase",
+  "account_number": "MA-100200300",
+  "amount_deducted": 450.50,
+  "status": "completed",
+  "timestamp": "2026-03-10T01:50:22Z",
+  "metadata": {
+    "asset": "AAPL",
+    "shares": 2.5,
+    "price_per_share": 180.20,
+    "broker_fee": 0.00
+  }
+}
