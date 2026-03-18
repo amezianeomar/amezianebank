@@ -137,7 +137,7 @@ if (isset($_SESSION['user_id'])) {
                     
                     <div class="d-flex gap-3 flex-wrap">
                         <a href="actions/login.php" class="btn cta-btn">Access Private Portal</a>
-                        <a href="#about" class="btn btn-outline-gold">Our Legacy</a>
+                        <a href="about.php" class="btn btn-outline-gold">Our Legacy</a>
                     </div>
                 </div>
                 
